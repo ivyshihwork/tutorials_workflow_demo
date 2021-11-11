@@ -22,7 +22,7 @@ from rest_framework.decorators import api_view
 
 class index(APIView):
     renderer_classes = [TemplateHTMLRenderer]
-    template_name = 'tutorials/index.html'
+#    template_name = 'tutorials/index.html'
 
     def get(self, request):
         queryset = Tutorial.objects.all()
@@ -31,7 +31,7 @@ class index(APIView):
 
 class list_all_tutorials(APIView):
     renderer_classes = [TemplateHTMLRenderer]
-#    template_name = 'tutorials/tutorial_list.html'
+    template_name = 'tutorials/tutorial_list.html'
 
     def get(self, request):
         queryset = Tutorial.objects.all()
